@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Frio - Soluções em Climatização</title>
+  <style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body { line-height: 1.6; color: #333; }
+
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      background: linear-gradient(90deg, #007F4F, #00AEEF);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      margin-left: 1.5rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    header nav a:hover { opacity: 0.8; }
+
+    .logo { font-size: 1.5rem; font-weight: bold; }
+
+    section { padding: 4rem 2rem; }
+
+    .home {
+      background: url('https://i.imgur.com/2N3nq2S.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .home h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    .home p { font-size: 1.2rem; margin-bottom: 2rem; }
+
+    .btn { 
+      background: #007F4F; 
+      color: white; 
+      padding: 0.8rem 1.5rem; 
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #005f36; }
+
+    .services h2, .contact h2, .location h2 { color: #007F4F; margin-bottom: 1.5rem; text-align: center; }
+
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .service-item {
+      background: #f1f1f1;
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .service-item:hover { transform: translateY(-5px); }
+
+    .contact-icons a {
+      margin: 0 1rem;
+      font-size: 2rem;
+      color: #007F4F;
+      transition: 0.3s;
+    }
+
+    .contact-icons a:hover { color: #005f36; }
+
+    footer {
+      background: #007F4F;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 2rem;
+    }
+
+    /* Responsivo */
+    @media(max-width:768px){
+      .services-list { flex-direction: column; align-items: center; }
+      header { flex-direction: column; align-items: flex-start; }
+      header nav { margin-top: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Tech Frio</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Serviços</a>
+      <a href="#schedule">Agendamento</a>
+      <a href="#location">Localização</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="home" id="home">
+    <h1>Tech Frio - Soluções em Climatização</h1>
+    <p>Conforto e qualidade no clima da sua casa ou empresa. Especialistas em ar-condicionado split.</p>
+    <a class="btn" href="#schedule">Agende agora</a>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Nossos Serviços</h2>
+    <div class="services-list">
+      <div class="service-item">
+        <h3>Venda de Split</h3>
+      </div>
+      <div class="service-item">
+        <h3>Instalação</h3>
+      </div>
+      <div class="service-item">
+        <h3>Manutenção Corretiva e Preventiva</h3>
+      </div>
+      <div class="service-item">
+        <h3>Limpeza e Higienização</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agendamento -->
+  <section class="schedule" id="schedule">
+    <h2>Agendamento</h2>
+    <p style="text-align:center;">Clique no botão abaixo para agendar pelo WhatsApp:</p>
+    <div style="text-align:center; margin-top:1rem;">
+      <a class="btn" href="https://api.whatsapp.com/send?phone=5592984600640&text=Olá,%20quero%20agendar%20um%20serviço%20com%20a%20Tech%20Frio" target="_blank">Agendar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location" id="location">
+    <h2>Localização</h2>
+    <p style="text-align:center;">Atendemos em toda a região. Confira nosso endereço no mapa:</p>
+    <div style="display:flex; justify-content:center; margin-top:1rem;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.456447917069!2d-60.0283!3d-3.1265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92f5e6a44f2df3f7%3A0x123456789abcdef0!2sEndereço%20Tech%20Frio!5e0!3m2!1spt-BR!2sbr!4v1678901234567" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contato</h2>
+    <div style="text-align:center;" class="contact-icons">
+      <a href="https://api.whatsapp.com/send?phone=5592984600640" target="_blank">📱</a>
+      <a href="https://www.instagram.com/techfrioam/" target="_blank">📸</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Tech Frio - Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
